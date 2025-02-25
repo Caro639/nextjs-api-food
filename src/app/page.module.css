@@ -97,7 +97,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -184,7 +184,7 @@
       rgba(var(--callout-rgb), 0.5)
     );
     background-clip: padding-box;
-    backdrop-filter: blur(24px);
+    /* backdrop-filter: blur(24px); */
   }
 
   .description div {
@@ -209,15 +209,15 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
+/* @media (prefers-color-scheme: dark) { */
+/* .vercelLogo {
     filter: invert(1);
-  }
+  } */
 
-  .logo {
+/* .logo {
     filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
-}
+} */
 
 @keyframes rotate {
   from {

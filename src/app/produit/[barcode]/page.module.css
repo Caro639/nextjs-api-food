@@ -1,0 +1,217 @@
+/* nav */
+.title {
+  margin-left: 40px;
+  margin-top: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.logowhite {
+  width: auto;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+/* animation logo  */
+/* .logowhite {
+  background-color: #e30613;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
+  color: white;
+  height: 100%;
+  width: 20%;
+
+  -webkit-animation: 4s linear 0s infinite alternate move_eye;
+  animation: 4s linear 0s infinite alternate move_eye;
+}
+
+@-webkit-keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+} */
+
+/* barre de recherche */
+.Barre {
+  display: flex;
+  flex-direction: row;
+  border: white 2px solid;
+  border-radius: 40px 40px 40px 40px;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Article[type="search"] {
+  flex: 6;
+}
+
+.submit[type="submit"] {
+  flex: 1;
+}
+
+.Barre {
+  margin-top: 40px;
+  max-width: 70%;
+}
+
+.Article {
+  position: relative;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 40px 0 0 40px;
+  font-size: 16px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.submit {
+  max-width: 100px;
+  min-width: 50px;
+  border-radius: 0 40px 40px 0;
+  background-color: #e30613;
+  color: white;
+}
+
+/* tableau */
+.Table {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.caption {
+  border: 1px solid white;
+  padding: 10px;
+
+  color: white;
+}
+
+.tr {
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.energie1 {
+  border: 1px solid white;
+  text-align: center;
+}
+
+.energie3 {
+  border: 1px solid white;
+  text-align: center;
+}
+
+.gras1 {
+  border: 1px solid white;
+  text-align: center;
+}
+
+.gras3 {
+  border: 1px solid white;
+  text-align: center;
+}
+.Acides1 {
+  border: 1px solid white;
+  text-align: center;
+}
+.Acides3 {
+  border: 1px solid white;
+  text-align: center;
+}
+.Glucides1 {
+  border: 1px solid white;
+  text-align: center;
+}
+.Glucides3 {
+  border: 1px solid white;
+  text-align: center;
+}
+
+/* titre api article */
+.titre_article {
+  text-align: center;
+}
+
+.photo {
+  margin-left: 80px;
+  margin-top: 30px;
+}
+
+/* marque et ingredient */
+.marque {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.iban {
+  margin-left: 80px;
+  margin-top: 15px;
+}
+
+.ingredient {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+/* animation */
+.polling_message {
+  color: white;
+  float: left;
+  margin-right: 3%;
+}
+
+.animation {
+  background-color: black;
+  height: 25px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cylon_eye {
+  background-color: #e30613;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
+  color: white;
+  height: 100%;
+  width: 20%;
+
+  -webkit-animation: 4s linear 0s infinite alternate move_eye;
+  animation: 4s linear 0s infinite alternate move_eye;
+}
+
+@-webkit-keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}

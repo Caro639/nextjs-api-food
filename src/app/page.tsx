@@ -1,5 +1,7 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
+import Link from "next/link";
+import { Nav } from "./Banner/Banner";
 
 export default function Home() {
   return (
@@ -7,21 +9,21 @@ export default function Home() {
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
+          <code className={styles.code}>src/app/a-propos/page.tsx</code>
         </p>
         <div>
           <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            href="http://localhost:3000/a-propos"
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
+            By{" "}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
+              src="/logo_white.svg"
+              alt="Que za quo Logo"
               className={styles.vercelLogo}
-              width={100}
-              height={24}
+              width={180}
+              height={140}
               priority
             />
           </a>
@@ -31,25 +33,25 @@ export default function Home() {
       <div className={styles.center}>
         <Image
           className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          src="/logo_white.svg"
+          alt="que za quo Logo"
+          width={310}
+          height={157}
           priority
         />
       </div>
 
       <div className={styles.grid}>
         <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="http://localhost:3000/a-propos"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Docs <span>-&gt;</span>
+            Page Accueil <span>-&gt;</span>
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
+          <p>Recherchez les informations alimentaires.</p>
         </a>
 
         <a
@@ -77,19 +79,17 @@ export default function Home() {
         </a>
 
         <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="http://localhost:3000/produit"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Deploy <span>-&gt;</span>
+            Page produit <span>-&gt;</span>
           </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+          <p>Recherchez avec Que Za Quo.</p>
         </a>
       </div>
     </main>
-  )
+  );
 }
