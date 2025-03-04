@@ -26,7 +26,14 @@ async function getRequest(barcode: any) {
   return response.json();
 }
 
-export default async function Page({ params: { barcode } }) {
+export default async function Page(props: any) {
+  //-
+  // export default async function Page({ props }: { params: any }) {
+
+  const params = await props.params;
+
+  const { barcode } = params;
+
   const data = await getRequest(barcode);
   console.log(data);
 
@@ -48,7 +55,7 @@ export default async function Page({ params: { barcode } }) {
 
       {/* <main> */}
       <Identify data={data} />
-      <Tableau />
+      <Tableau data={data} />
       <Nutriscore />
       {/* </main> */}
     </div>

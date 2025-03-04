@@ -6,20 +6,24 @@ import { useRouter } from "next/navigation";
 export default function SearchBar() {
   const router = useRouter();
 
-  function handleSubmit(e) {
+  function handleSubmit(e: any) {
     e.preventDefault();
     const barcode = e.target.barcode.value;
     router.push(`/produit/${barcode}`);
   }
 
   return (
-    <form className={styles.Barre} action="/produit" onSubmit={handleSubmit}>
+    <form
+      className={styles.Barre}
+      action="/produit"
+      onSubmit={handleSubmit}
+    >
       <label htmlFor="searchInput"></label>
       <input
         type="search"
         name="barcode"
         className={styles.Article}
-        placeholder="Scanner ou rechercher un article !"
+        placeholder="Entrez un code-barre - exemple: 8000500045497"
       />
       <input
         type="submit"

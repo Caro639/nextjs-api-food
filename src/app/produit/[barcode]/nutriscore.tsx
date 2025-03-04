@@ -3,21 +3,21 @@ import Image from "next/image";
 
 export default function Nutriscore() {
   return (
-    <div>
+    <div className={styles.logos}>
       <Image
         src="/nutri_d.svg"
         alt="nutriscore"
-        className="nutriscore"
-        width={100}
-        height={100}
+        className={styles.nutriscore}
+        width={278}
+        height={150}
       />
 
       <Image
         src="/nova.svg"
         alt="score nova"
-        className="nova"
-        width={100}
-        height={100}
+        className={styles.nova}
+        width={68}
+        height={130}
       />
     </div>
   );

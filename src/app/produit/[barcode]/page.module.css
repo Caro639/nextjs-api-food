@@ -1,60 +1,69 @@
 /* nav */
-.title {
-  margin-left: 40px;
-  margin-top: 20px;
+.banner {
+  border-bottom: #e30613 solid 2px;
+}
+
+/* menu */
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  background-color: #e30613;
+  height: 45px;
+}
+
+.tel[href^="tel"]::before {
+  content: "📞 ";
+}
+
+.fb {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.pinterest {
+  width: 42px;
+  height: 42px;
+  margin-right: 10px;
+}
+
+.twiter {
+  width: 42px;
+  height: 42px;
+}
+.retour {
+  margin: 10px auto;
+  font-size: 1.2em;
   color: white;
-  margin-bottom: 10px;
+}
+
+.question {
+  text-align: left;
+  margin: 80px auto 20px 80px;
+  font-size: 1.7em;
+  line-height: 1.5;
 }
 
 .logowhite {
-  width: auto;
-  margin-top: 30px;
-  margin-left: 30px;
+  width: 300px;
+  height: auto;
+  margin-top: 10px;
+  /* margin-left: 30px; */
 }
 
-/* animation logo  */
-/* .logowhite {
+.footer {
   background-color: #e30613;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.9) 25%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.9) 75%
-  );
   color: white;
-  height: 100%;
-  width: 20%;
-
-  -webkit-animation: 4s linear 0s infinite alternate move_eye;
-  animation: 4s linear 0s infinite alternate move_eye;
-}
-
-@-webkit-keyframes move_eye {
-  from {
-    margin-left: -20%;
-  }
-  to {
-    margin-left: 100%;
-  }
-}
-@keyframes move_eye {
-  from {
-    margin-left: -20%;
-  }
-  to {
-    margin-left: 100%;
-  }
-} */
-
-/* barre de recherche */
-.Barre {
   display: flex;
   flex-direction: row;
-  border: white 2px solid;
-  border-radius: 40px 40px 40px 40px;
-  max-width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .Article[type="search"] {
@@ -65,19 +74,19 @@
   flex: 1;
 }
 
-.Barre {
-  margin-top: 40px;
-  max-width: 70%;
-}
-
 .Article {
   position: relative;
   display: flex;
   border: 1px solid black;
   border-radius: 40px 0 0 40px;
   font-size: 16px;
-  height: 30px;
+  height: 36px;
   padding-left: 10px;
+}
+
+.produit {
+  font-size: 1.8em;
+  margin: auto 80px;
 }
 
 .submit {
@@ -89,6 +98,12 @@
 }
 
 /* tableau */
+.tableau {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .Table {
   margin-left: 40px;
   margin-top: 20px;
@@ -97,7 +112,6 @@
 .caption {
   border: 1px solid white;
   padding: 10px;
-
   color: white;
 }
 
@@ -109,11 +123,13 @@
 .energie1 {
   border: 1px solid white;
   text-align: center;
+  color: #e30613;
 }
 
 .energie3 {
   border: 1px solid white;
   text-align: center;
+  color: #e30613;
 }
 
 .gras1 {
@@ -143,42 +159,65 @@
 }
 
 /* titre api article */
-.titre_article {
-  text-align: center;
+/* .nom {
+  text-align: left;
+} */
+
+.prod {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
 }
 
 .photo {
-  margin-left: 80px;
-  margin-top: 30px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  object-fit: cover;
 }
 
 /* marque et ingredient */
+.ing {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: auto 80px;
+}
 .marque {
-  text-align: center;
-  margin-top: 30px;
+  text-align: left;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  text-decoration: underline;
 }
 
 .iban {
-  margin-left: 80px;
-  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
-.ingredient {
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-top: 20px;
+.ingredients {
+  font-size: 1.2em;
+  line-height: 1.8;
 }
 
 /* animation */
 .polling_message {
   color: white;
+  font-size: 2em;
+  text-align: center;
   float: left;
-  margin-right: 3%;
+  margin-left: 36%;
+  /* margin-right: 3%; */
 }
 
 .animation {
   background-color: black;
-  height: 25px;
+  height: 75px;
   width: 100%;
   overflow: hidden;
 }
@@ -195,8 +234,10 @@
   height: 100%;
   width: 20%;
 
-  -webkit-animation: 4s linear 0s infinite alternate move_eye;
-  animation: 4s linear 0s infinite alternate move_eye;
+  -webkit-animation: 7s linear 0s infinite
+    alternate move_eye;
+  animation: 7s linear 0s infinite alternate
+    move_eye;
 }
 
 @-webkit-keyframes move_eye {
@@ -213,5 +254,80 @@
   }
   to {
     margin-left: 100%;
+  }
+}
+
+/* logo nutriscore */
+.nutriscore {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+  margin-left: 80px;
+}
+
+.nova {
+  width: 70px;
+  height: auto;
+}
+
+.logos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 80px auto;
+  width: 80%;
+}
+
+/* responsive */
+
+@media screen and (max-width: 992px) {
+  .polling_message {
+    margin-left: 23%;
+  }
+}
+@media screen and (max-width: 570px) {
+  .polling_message {
+    font-size: 1.5em;
+    margin-left: 19%;
+  }
+
+  .logowhite {
+    width: 200px;
+  }
+
+  .retour {
+    font-size: 1.1em;
+  }
+
+  .question {
+    font-size: 1.4em;
+    margin: 60px auto 20px 40px;
+  }
+
+  .marque {
+    font-size: 1.3em;
+  }
+
+  .ingredients {
+    font-size: 1.1em;
+  }
+
+  .tableau {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .polling_message {
+    margin-left: 12%;
+  }
+
+  .question {
+    font-size: 1.2em;
+    margin: 60px auto 20px 20px;
+  }
+
+  .nutriscore {
+    margin-left: 40px;
   }
 }
