@@ -18,19 +18,22 @@ export default function About() {
         <h1 className={styles.titre}>
           A propos de Qué&apos;Za&apos;Quo?
         </h1>
+        <h2 className={styles.titre2}>
+          Entrez votre code-barre !
+        </h2>
         <p className={styles.texte}>
-          Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Debitis, odio
-          doloribus? Labore consequuntur
-          praesentium quam deleniti consectetur
-          enim officia, nam reiciendis commodi?
-          Magnam reiciendis blanditiis molestias
-          mollitia quibusdam delectus vitae
-          accusamus consectetur unde possimus
-          expedita rem ut, nesciunt tempora quod
-          deleniti voluptatum accusantium! Hic
-          repellendus est impedit doloribus
-          aliquam rerum!
+          Entrez votre code-barre ! Lorem ipsum
+          dolor sit amet consectetur adipisicing
+          elit. Debitis, odio doloribus? Labore
+          consequuntur praesentium quam deleniti
+          consectetur enim officia, nam reiciendis
+          commodi? Magnam reiciendis blanditiis
+          molestias mollitia quibusdam delectus
+          vitae accusamus consectetur unde
+          possimus expedita rem ut, nesciunt
+          tempora quod deleniti voluptatum
+          accusantium! Hic repellendus est impedit
+          doloribus aliquam rerum!
         </p>
         <Footer />
       </main>

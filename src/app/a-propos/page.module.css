@@ -2,10 +2,11 @@
   text-align: center;
   font-size: 3.5em;
 }
-
-/* .logowhite {
-  width: auto;
-} */
+.titre2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 40px auto;
+}
 
 .texte {
   color: white;
@@ -72,5 +73,12 @@
 @media screen and (max-width: 480px) {
   .Barre {
     max-width: 80%;
+  }
+  .titre {
+    font-size: 2.5em;
+  }
+
+  .titre2 {
+    font-size: 1.8em;
   }
 }

@@ -56,18 +56,6 @@ export default function Identify({
         </h4>
         <p className={styles.ingredients}>
           Ingrédients : {product.ingredients_text}
-          {/* Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Debitis, odio
-          doloribus? Labore consequuntur
-          praesentium quam deleniti consectetur
-          enim officia, nam reiciendis commodi?
-          Magnam reiciendis blanditiis molestias
-          mollitia quibusdam delectus vitae
-          accusamus consectetur unde possimus
-          expedita rem ut, nesciunt tempora quod
-          deleniti voluptatum accusantium! Hic
-          repellendus est impedit doloribus
-          aliquam rerum! */}
         </p>
       </div>
     </div>

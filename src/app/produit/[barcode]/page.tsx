@@ -57,15 +57,11 @@ export default async function Page(props: any) {
       <SearchBar />
       <Animation />
       <main>
-        {/* <h2 className={styles.question}>
-        Quels sont les ingrédients dans ?
-      </h2> */}
         <Identify data={data} />
         <Tableau data={data} />
         <Nutriscore />
       </main>
       <Footer />
-      {/* </main> */}
     </div>
   );
 }

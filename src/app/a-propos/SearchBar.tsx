@@ -22,6 +22,7 @@ export default function SearchBar() {
       <input
         type="search"
         name="barcode"
+        id="searchInput"
         className={styles.Article}
         placeholder="Entrez un code-barre - exemple: 8000500045497"
       />
