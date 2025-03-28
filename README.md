@@ -2,6 +2,10 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## application connectée à open food fact API open source
+
+Recherchez ce que contient le produit que vous allez manger en entrant le code-barre dans la barre de recherche
+
 ## Getting Started
 
 First, run the development server:
