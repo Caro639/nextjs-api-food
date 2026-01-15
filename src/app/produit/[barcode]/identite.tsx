@@ -6,20 +6,12 @@ import styles from "./page.module.css";
 import Tableau from "./table";
 
 // export function Photo({ src, h, w }) {//-
-export function Photo({
-  src,
-  h,
-  w,
-}: {
-  src: string;
-  h: number;
-  w: number;
-}) {
+export function Photo({ src, h, w }: { src: string; h: number; w: number }) {
   return (
     <div className={styles.photo}>
       <Image
         src={src}
-        alt="Photo du produit"
+        alt='Photo du produit'
         className={styles.photo}
         width={w}
         height={h}
@@ -39,7 +31,7 @@ export default function Identify({
       <h2 className={styles.question}>
         Quels sont les ingrédients dans ?
         <br />
-        {product.generic_name}
+        <span className={styles.productName}>{product.generic_name}</span>
       </h2>
       <Photo
         src={product.image_front_url}
@@ -48,12 +40,8 @@ export default function Identify({
       />
 
       <div className={styles.ing}>
-        <h3 className={styles.marque}>
-          {product.brands}
-        </h3>
-        <h4 className={styles.iban}>
-          Code-barre : {product.code}
-        </h4>
+        <h3 className={styles.marque}>{product.brands}</h3>
+        <h4 className={styles.iban}>Code-barre : {product.code}</h4>
         <p className={styles.ingredients}>
           Ingrédients : {product.ingredients_text}
         </p>

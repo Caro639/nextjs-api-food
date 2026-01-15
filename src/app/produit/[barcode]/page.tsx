@@ -37,9 +37,7 @@ export default async function Page(props: any) {
 
   const data = await getRequest(barcode);
 
-  if (
-    data.status_verbose == "product not found"
-  ) {
+  if (data.status_verbose == "product not found") {
     return (
       <div>
         <Banner />
@@ -54,12 +52,12 @@ export default async function Page(props: any) {
       <Menu />
       <Banner />
 
-      <SearchBar />
       <Animation />
+      <SearchBar />
       <main>
         <Identify data={data} />
         <Tableau data={data} />
-        <Nutriscore />
+        {/* <Nutriscore /> */}
       </main>
       <Footer />
     </div>

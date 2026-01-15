@@ -1,6 +1,13 @@
 /* styles par defaut */
 .title {
   text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .vercelLogo {
@@ -20,10 +27,17 @@
 }
 
 .description a {
-  display: flex;
-  /* justify-content: center; */
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  background: var(--accent-subtle);
+  border: 1px solid rgba(232, 93, 117, 0.2);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .description p {
@@ -31,8 +45,7 @@
   margin: 0;
   padding: 1rem;
   background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid
-    rgba(var(--callout-border-rgb), 0.3);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
   border-radius: var(--border-radius);
 }
 
@@ -49,12 +62,16 @@
 }
 
 .card {
-  padding: 1rem 1.2rem;
+  padding: 2rem 2.5rem;
   border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid
-    rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
 .card span {
@@ -102,17 +119,71 @@
 .logo {
   width: 25%;
   height: 25%;
+  object-fit: cover;
 }
+
+.scannerContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.scannerLine {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(232, 93, 117, 0.2) 20%,
+    rgba(232, 93, 117, 0.6) 50%,
+    rgba(232, 93, 117, 0.2) 80%,
+    transparent 100%
+  );
+  box-shadow: 0 0 10px rgba(232, 93, 117, 0.4), 0 0 20px rgba(232, 93, 117, 0.2),
+    0 0 30px rgba(232, 93, 117, 0.1);
+  animation: scan 3s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
+  .description a:hover {
+    background: rgba(232, 93, 117, 0.2);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(232, 93, 117, 0.2);
+  }
+
   .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid
-      rgba(var(--card-border-rgb), 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--accent-color);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(232, 93, 117, 0.15);
   }
 
   .card:hover span {
-    transform: translateX(4px);
+    transform: translateX(8px);
   }
 }
 
@@ -191,8 +262,7 @@
     padding: 2rem 1rem 1.4rem;
     border-radius: 0;
     border: none;
-    border-bottom: 1px solid
-      rgba(var(--callout-border-rgb), 0.25);
+    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
     background: none;
     background-clip: padding-box;
   }
