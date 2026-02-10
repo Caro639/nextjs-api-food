@@ -1,36 +1,41 @@
 import Link from "next/link";
 import styles from "../produit/[barcode]/page.module.css";
 
+const footerLinks = [
+  { href: "/", label: "Accueil" },
+  { href: "/a-propos", label: "Mentions légales" },
+  { href: "/contact", label: "Contact" },
+];
+
 export function Footer() {
   return (
     <footer className={styles.footer}>
-      <h4 className={styles.title}>
-        <Link href="/" className={styles.retour}>
-          Accueil
-        </Link>
-      </h4>
+      <nav>
+        {footerLinks.map((link) => (
+          <h4 key={link.href} className={styles.title}>
+            <Link href={link.href} className={styles.retour} aria-label={link.label}>
+              {link.label}
+            </Link>
+          </h4>
+        ))}
+      </nav>
 
-      <h4 className={styles.title}>
-        <Link
-          href="/a-propos"
-          className={styles.retour}
-        >
-          Mentions légales
-        </Link>
-      </h4>
+      {/* Optional social media links */}
+      <div className={styles.socials}>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          Twitter
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          Facebook
+        </a>
+      </div>
 
-      <h4 className={styles.title}>
-        <Link
-          href="/a-propos"
-          className={styles.retour}
-        >
-          Contact
-        </Link>
-      </h4>
+      {/* Dynamic copyright */}
+      <p className={styles.copy}>
+        &copy; {new Date().getFullYear()} Your Company Name. All rights reserved.
+      </p>
     </footer>
   );
 }
 
-export default function Bottom() {
-  return <Footer />;
-}
+export default Footer;
