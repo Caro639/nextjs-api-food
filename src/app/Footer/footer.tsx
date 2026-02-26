@@ -1,36 +1,50 @@
 import Link from "next/link";
 import styles from "../produit/[barcode]/page.module.css";
 
+const footerLinks = [
+  { href: "/", label: "Accueil" },
+  { href: "/a-propos", label: "Mentions légales" },
+  // { href: "/contact", label: "Contact" },
+];
+
 export function Footer() {
   return (
     <footer className={styles.footer}>
-      <h4 className={styles.title}>
-        <Link href="/" className={styles.retour}>
-          Accueil
-        </Link>
-      </h4>
+      <nav className='footer-nav'>
+        {footerLinks.map((link) => (
+          <h4 key={link.href} className={styles.title}>
+            <Link
+              href={link.href}
+              className={styles.retour}
+              aria-label={link.label}
+            >
+              {link.label}
+            </Link>
+          </h4>
+        ))}
+      </nav>
 
-      <h4 className={styles.title}>
-        <Link
-          href="/a-propos"
-          className={styles.retour}
+      {/* Réseaux sociaux */}
+      <div className='footer-socials'>
+        <a href='https://twitter.com' target='_blank' rel='noopener noreferrer'>
+          Twitter
+        </a>
+        <a
+          href='https://facebook.com'
+          target='_blank'
+          rel='noopener noreferrer'
         >
-          Mentions légales
-        </Link>
-      </h4>
+          Facebook
+        </a>
+      </div>
 
-      <h4 className={styles.title}>
-        <Link
-          href="/a-propos"
-          className={styles.retour}
-        >
-          Contact
-        </Link>
-      </h4>
+      {/* Copyright dynamique */}
+      <p className='footer-year'>
+        &copy; {new Date().getFullYear()} Qué&apos;Za&apos;Quo?. Tous droits
+        réservés.
+      </p>
     </footer>
   );
 }
 
-export default function Bottom() {
-  return <Footer />;
-}
+export default Footer;
